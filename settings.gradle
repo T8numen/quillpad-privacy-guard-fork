@@ -1,0 +1,20 @@
+// Apply the Gradle version catalog
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven {
+            url = "https://www.jitpack.io"
+        }
+    }
+}
+
+include ':app'
+rootProject.name = "quillpad"
+
+buildCache {
+    local {
+        directory = new File(rootDir, 'build-cache')
+    }
+}
